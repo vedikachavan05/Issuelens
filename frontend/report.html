@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IssueLens - Report Ready</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <a href="index.html" class="brand">
+        <span class="brand-icon">◉</span>
+        <strong>IssueLens</strong>
+    </a>
+    <a href="login.html" class="profile-link">♙</a>
+</header>
+
+<div class="progress">
+    <div class="progress-item completed">
+        <span>✓</span><small>Report Issue</small>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-item completed">
+        <span>✓</span><small>Review AI</small>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-item active">
+        <span>3</span><small>Report Ready</small>
+    </div>
+</div>
+
+<main class="container">
+    <div class="success-icon">✓</div>
+    <h1>Your report is ready!</h1>
+    <p>Review and edit your complaint before submitting it.</p>
+
+    <label for="reportTitle">Complaint title *</label>
+    <input type="text" id="reportTitle" required>
+
+    <label for="finalComplaint">Complaint description *</label>
+    <textarea id="finalComplaint" rows="8" required></textarea>
+
+    <button type="button" id="copyButton">▢ Copy Complaint</button>
+    <p id="copyMessage" class="message"></p>
+
+    <section class="result-card">
+        <h2>Where to report?</h2>
+        <p id="reportLocation"></p>
+        <p>Find the appropriate municipal corporation or official civic
+           grievance channel for this location.</p>
+        <a href="https://pgportal.gov.in/"
+           target="_blank" rel="noopener noreferrer">
+            Visit CPGRAMS portal ↗
+        </a>
+        <p class="helper">
+            Verify that this portal accepts your type of complaint.
+            Local municipal issues may require a different channel.
+        </p>
+    </section>
+
+    <button type="button" class="secondary"
+            id="newReportButton">＋ Start New Report</button>
+</main>
+
+</body>
+</html>

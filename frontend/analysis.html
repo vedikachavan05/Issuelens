@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IssueLens - AI Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <a href="index.html" class="brand">
+        <span class="brand-icon">◉</span>
+        <strong>IssueLens</strong>
+    </a>
+    <a href="login.html" class="profile-link">♙</a>
+</header>
+
+<div class="progress">
+    <div class="progress-item completed">
+        <span>✓</span><small>Report Issue</small>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-item active">
+        <span>2</span><small>Review AI</small>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-item">
+        <span>3</span><small>Report Ready</small>
+    </div>
+</div>
+
+<main class="container">
+    <a href="index.html" class="back-link">← Back</a>
+    <div class="step-label">STEP 2 OF 3</div>
+
+    <section id="loadingState" class="loading-state">
+        <div class="spinner"></div>
+        <h2>Preparing your report...</h2>
+        <p>Loading the issue details and preparing a sample complaint.</p>
+    </section>
+
+    <section id="analysisContent" class="hidden">
+        <h1>Review AI Analysis</h1>
+        <p>Check the issue details and complaint draft.</p>
+
+        <img id="analysisImage" class="preview hidden"
+             alt="Uploaded civic issue">
+
+        
+           
+<div class="result-card">
+    <span class="result-label">AI-IDENTIFIED ISSUE</span>
+    <h2 id="issueType">Civic issue</h2>
+</div>
+
+<div class="analysis-grid">
+
+    <div class="analysis-card location-card">
+        <span class="field-label">📍 LOCATION</span>
+        <p id="issueLocation">Not available</p>
+    </div>
+
+    <div class="analysis-card priority-card">
+        <span class="field-label">⚠️ PRIORITY</span>
+        <p id="issuePriority">Not available</p>
+    </div>
+
+    <div class="analysis-card">
+        <span class="field-label">🔍 REASON</span>
+        <p id="issueReason">Not available</p>
+    </div>
+
+    <div class="analysis-card">
+        <span class="field-label">🏢 SUGGESTED DEPARTMENT</span>
+        <p id="issueDepartment">Not available</p>
+    </div>
+
+    <div class="analysis-card action-card">
+        <span class="field-label">✅ RECOMMENDED ACTION</span>
+        <p id="issueAction">Not available</p>
+    </div>
+
+</div>
+
+        
+
+        <label for="complaintPreview">Generated complaint preview</label>
+        <textarea id="complaintPreview" rows="7"></textarea>
+
+        <p class="demo-note">
+            Demo mode: this is a sample suggestion, not a real AI diagnosis.
+            Please verify the details.
+        </p>
+
+        <div class="button-row">
+            <button type="button" class="secondary"
+                    onclick="window.location.href='index.html'">
+                ← Go Back
+            </button>
+            <button type="button" id="reviewButton">
+                Review Report →
+            </button>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

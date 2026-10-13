@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IssueLens - Report an Issue</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <a href="index.html" class="brand">
+        <span class="brand-icon">◉</span>
+        <strong>IssueLens</strong>
+    </a>
+    <a href="login.html" class="profile-link">♙</a>
+</header>
+
+<div class="progress">
+    <div class="progress-item active">
+        <span>1</span><small>Report Issue</small>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-item">
+        <span>2</span><small>Review AI</small>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-item">
+        <span>3</span><small>Report Ready</small>
+    </div>
+</div>
+
+<main class="container">
+    <div class="step-label">STEP 1 OF 3</div>
+    <h1>Report a civic issue</h1>
+    <p>Describe the issue you noticed. Uploading an image is optional.</p>
+
+    <form id="issueForm">
+
+        <label for="description">Describe the issue *</label>
+        <textarea id="description" rows="5"
+            maxlength="500"
+            placeholder="E.g. Garbage is overflowing near the bus stop..."
+            required></textarea>
+        <small class="helper">Maximum 500 characters.</small>
+
+        <label for="location">Issue location *</label>
+        <input type="text" id="location"
+            placeholder="Enter area, street, landmark or address"
+            required>
+        <button type="button" id="currentLocationButton">
+    📍 Use My Current Location
+        </button>
+
+        <p id="locationMessage" aria-live="polite"></p>
+
+        <label for="photo">Upload an image (optional)</label>
+        <div class="upload-box">
+            <span class="upload-icon">▧</span>
+            <p>Choose an image from your device</p>
+            <small>JPG, PNG or WEBP</small>
+            <input type="file" id="photo" accept="image/*">
+        </div>
+
+        <img id="preview" class="preview hidden"
+             alt="Preview of selected issue">
+
+        <p id="issueMessage" class="message"></p>
+
+        <button type="submit">Analyze Issue →</button>
+    </form>
+</main>
+
+</body>
+</html>
