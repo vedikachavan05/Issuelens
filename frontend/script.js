@@ -141,6 +141,11 @@ if (issueForm) {
                         description: description,
                         location: location
                     })
+                    ,body: JSON.stringify({
+                        description: description,
+                         location: location,
+                         image: imageData
+                        })
                 }
             );
 
